@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!--Alex Pickering-->	
+<head>
+    <title>The Color Game</title>
+	<style>
+		a {color:orange}
+		h1 {font-family: Arial, sans-serif;}
+		h2 {font-family: Times, serif;}
+	
+	</style>
+
+</head>
+<body>
+	<div id="challengehead" style="font-family: Arial, sans-serif;"><h1>Elemantary Color Challenge</h1><hr><div>
+    <div id="randquestion"></div>
+    <div id="image"><img src="regularGrid-big-rectangles.png" usemap="#image-map"><div>
+    <div id="randimap"><div>
+
+
+
+
+
+    <script>
+		let q1 = "<h2>Click on the color Red.</h2>";
+		let q2 = "<h2>Click on the color Yellow.</h2>";
+		let q3 = "<h2>Click on the color Green.</h2>";
+        let q4 = "<h2>Click on the color Light Blue.</h2>";
+		let q5 = "<h2>Click on the color Blue.</h2>";
+		let q6 = "<h2>Click on the color Purple.</h2>";
+		
+		let map1 = "<map name='image-map'><area target='' alt='Red' title='Red' href='Correct.html' coords='156,61,58,459' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='158,61,656,459' shape='rect'>";
+		let map2 = "<map name='image-map'><area target='' alt='Yellow' title='Yellow' href='Correct.html' coords='256,460,156,59' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='156,460,57,61' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='259,459,655,61' shape='rect'>";
+        let map3 = "<map name='image-map'><area target='' alt='Green' title='Green' href='Correct.html' coords='255,459,357,61' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='256,460,57,61' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='356,461,655,61' shape='rect'>";
+		let map4 = "<map name='image-map'><area target='' alt='Light Blue' title='Light Blue' href='Correct.html' coords='358,460,457,60' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='354,462,57,61' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='457,459,655,61' shape='rect'>";
+		let map5 = "<map name='image-map'><area target='' alt='Blue' title='Blue' href='Correct.html' coords='557,460,457,59' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='457,460,57,61' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='556,460,655,61' shape='rect'>";
+		let map6 = "<map name='image-map'><area target='' alt='Purple' title='Purple' href='Correct.html' coords='556,60,655,459' shape='rect'><area target='' alt='wrong' title='wrong' href='Incorrect.html' coords='557,459,57,61' shape='rect'>";
+		
+		let randq = Math.floor(Math.random()*10)%6+1;
+		
+		console.log(randq);
+		if (randq == 1){
+			document.getElementById('randquestion').innerHTML = q1;
+			document.getElementById('randimap').innerHTML = map1;
+		} else if (randq == 2) {
+			document.getElementById('randquestion').innerHTML = q2;	
+			document.getElementById('randimap').innerHTML = map2;			
+		} else if (randq == 3) {
+			document.getElementById('randquestion').innerHTML = q3;	
+			document.getElementById('randimap').innerHTML = map3;			
+	    } else if (randq == 4) {
+			document.getElementById('randquestion').innerHTML = q4;	
+			document.getElementById('randimap').innerHTML = map4;			
+		} else if (randq == 5) {
+			document.getElementById('randquestion').innerHTML = q5;	
+			document.getElementById('randimap').innerHTML = map5;			
+		} else if (randq == 6) {
+			document.getElementById('randquestion').innerHTML = q6;	
+			document.getElementById('randimap').innerHTML = map6;			
+		}
+	
+	</script>
+
+</body>
+</html>
